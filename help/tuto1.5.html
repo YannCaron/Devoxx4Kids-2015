@@ -1,0 +1,1187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0086)http://www.algoid.net/help.php?name=tutorials&url=tuto_1.5_conditional_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto1.5_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.5_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.5_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.5_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.5_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.5_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.5_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto1.5_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.5_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.5_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto1.5_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>1.5 - Conditions If then else</h1>
+		<p>Parfois il est nécessaire que le programme prenne une décision.<br>
+Cela va determiner le comportement, l'intelligence du programme.<br>
+Par exemple si une variable a une certaine valeur, alors faire tel action, sinon faire autre chose.<br>
+Ou encore, si l'utilisateur répond avec tel valeur, alors .... etc.<br>
+Les conditions permettent de modifier le déroulement du programme en vérifiant certaine condition que vous avez déterminées.</p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#if_then">if then</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#else,_else_if">else, else if</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#not">not</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#autres_conditions">autres conditions</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#operateurs">operateurs</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#à_toi_de_jouer">à toi de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tutorials_FR&amp;mobile=false">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2>		<p>Avant de lire ce tutoriel, il est important d'avoir lu  :&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR">1.1 - Qu'est ce qu'un programme ?</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR">1.3 - Boucles loops</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR">1.4 - Variables</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR">1.6 - Boucle for</a></p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><p>
+Que sont les booléens et les conditions ?<br>
+</p>
+
+<h3>booléen</h3>
+<p>
+Dans le tutoriel précédent, nous avons vu deux types de données : le number (nombre) qui représente toute valeur numérique manipulé dans le programme et la chaîne pour manipuler les phrase.<br>
+Nous allons voir un troisième type, le booléen.<br>
+Un booléen est un type qui représente seulement deux états : true (vrai) et false (faux).<br>
+</p>
+
+<h3>condition</h3>
+<p>
+Une condition est une opération qui doit être vérifiée (dont le résultat doit être vrai) :<br>
+Par exemple, nous voulons modifier le comportement d'un programme si le nombre est plus grand qu'un autre. Ou is la phrase est différente d'une autre.<br>
+</p>
+<p>Nous allons articuler ce tutoriel autour de cet exemple :</p>
+<a href="./tuto1.5_files/basic.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/basic.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">basic</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// la couleur de départ est verte</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// le conteur sera utilisé dans les exemples suivants</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<a name="if_then"></a><h2>if then<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><p>
+L'instruction If vas exécuter le bloque de code si la condition ce vérifie à un point du programme.<br>
+Sa syntaxe est : if (condition) {bloque}<br>
+Par exemple nous avons besoin de changer la couleur d'algo à la moitié de la boucle :
+On pourrait écrire 2 boucles qui se suivent loop (2) {} .... loop (2) {} mais ce n'est pas très élégant.
+Sinon nous pouvons vérifier, à chaque passage de la boucle, que notre vert soit plus grand que 2 et dans ce cas changer la couleur.
+if (i == 3) { autre couleur }
+</p>
+<a href="./tuto1.5_files/if.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/if.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">la moitié magenta</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// la couleur de départ est verte</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+&nbsp; <br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// la couleur deviens magenta à partir du spot 3</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>Note que dans l'expression booléenne le symbole '==' est utilisé pour vérifier l'égalité.<br>
+Ce symbole a été choisi pour le distinguer de l'assignation '='<br>
+Donc le programme va changer la couleur (changement contenue dans le bloque) quand i sera égale à 3.
+Comme il n'y a pas d'autre instruction de changement de couleur, les spots suivants garderons la couleur magenta.
+</p>
+
+<a name="else,_else_if"></a><h2>else, else if<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><h3>else</h3>
+<p>
+L'instruction else (sinon) exécute le bloque de code si la condition n'est pas (NOT) vérifié au point du programme.<br>
+Elle est utilisée après l'instruction if et sa syntaxe est : if (condition) {bloque} else {bloque}.<br>
+Nous allons modifier le précédent code pour changer la couleur du 2 et uniquement celui-là</p>
+<a href="./tuto1.5_files/else.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/else.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">le spot 2 est magenta</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// vert</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<h3>else if</h3>
+<p>Pour créer une suite de teste, il est possible de chaîner les conditions 'if'.<br>
+Cela sert à tester si une première condition est vraie, sinon une seconde, sinon une troisième ect....<br>
+Les instructions 'else if' peuvent être chaînées entre la première instruction 'if' et la dernière 'else.'<br>
+La syntaxe est : if (condition1) {bloque1} else if (condition2) {bloque2} else if (condition3) {bloque3} .... else {bloqueElse}<br>
+Noua allons modifier notre exemple pour avoir une couleur différente pour chaque spot.</p>
+<a href="./tuto1.5_files/elseif.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/elseif.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">chacun sa couleur</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+<br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// vert</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">11</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cyan</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">12</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// rouge</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// 4</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<a name="not"></a><h2>not<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><p>'not' est un opérateur un-aire (qui agit sur une seule valeur, comme moins dans -7 par exemple).<br>
+Il représente l'inverse du booléen : not (non) true (vrai) vaut false (faux) et not (non) false (faux) vaut true (vrai).<br>
+En AL, sa syntaxe est '!'. Donc !true = false et !false = true.<br>
+Pour vérifier la non égalité (la différence) entre deux valeurs nous allons utiliser '!=' (est différent de).<br>
+Par exemple, pour vérifier que i est différent de 2 nous allons écrire : i != 2 qui signifie i est différent de 2.<br>
+En arithmétique booléenne il est aussi possible de dire !(i == 2) soit non (i égale 2).<br>
+Cette seconde écriture sera utile pour des opérations plus complexes sur les booléens.<br>
+Nous allons illustrer cela en inversant l'avant dernier exemple :
+</p>
+<a href="./tuto1.5_files/not.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/not.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">les spots 1, 3 et 4 sont magenta</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+<br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">!=</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// equivalent à if ( !(i == 2) )</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// vert</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<a name="autres_conditions"></a><h2>autres conditions<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><p>Egale et différent ne sont pas les deux seuls opérateurs de comparaison en AL.<br>
+Voici la liste des opérateurs disponnibles :
+</p><table class="simple">
+	<tbody><tr>
+		<td>&nbsp;</td>
+		<th>définition</th>
+		<th>exemple</th>
+	</tr>
+	<tr>
+		<th>==</th>
+		<td>égale à</td>
+		<td>i == 2 : i est égale à 2</td>
+	</tr>
+	<tr>
+		<th>!=</th>
+		<td>différent de</td>
+		<td>i != 2 : i est différent de 2</td>
+	</tr>
+	<tr>
+		<th>&lt;</th>
+		<td>plus petit que</td>
+		<td>i &lt; 2 : i est plus petit que 2</td>
+	</tr>
+	<tr>
+		<th>&lt;=</th>
+		<td>plus petit ou égale à</td>
+		<td>i &lt;= 2 : i est plus petit ou égale à 2</td>
+	</tr>
+	<tr>
+		<th>&gt;</th>
+		<td>plus grand que</td>
+		<td>i &gt; 2 : i is greater than 2</td>
+	</tr>
+	<tr>
+		<th>&gt;=</th>
+		<td>plus grand ou égale à</td>
+		<td>i &gt;= 2 : i est plus grand ou égale à 2</td>
+	</tr>
+</tbody></table>
+<p></p>
+
+<a name="operateurs"></a><h2>operateurs<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><h3>ou</h3>
+<p>En arithmétique booléenne, il est possible de créer des opérations complexes.<br>
+'ou' est un opérateur booléen comme '+' en mathématiques (2 + 2).<br>
+Il est utilisé pour résoudre des opérations comme : i est égale à 1 ou i est égale à 3.<br>
+En AL, sa syntaxe est '||'. Donc pour vérifier la condition précédente nous allons écrire : i == 1 || i == 3<br>
+Voici la table complète des possibilités.</p>
+<table class="simple">
+	<tbody><tr>
+		<td>||</td>
+		<th>true</th>
+		<th>false</th>
+	</tr>
+	<tr>
+		<th>true</th>
+		<td>true</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<th>false</th>
+		<td>true</td>
+		<td>false</td>
+	</tr>
+</tbody></table>
+<p><br>Nous allons modifier l'exemple précédent pour colorer les spots 1 et 3.<br>
+Donc nous allons tester que i soit égale à 1 ou à 3 :</p>
+<a href="./tuto1.5_files/or.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/or.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">les spots 1 et 3 sont magenta</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+<br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">1</span> <span style="color: #cc0000;">||</span> i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// un sur deux</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// donc 2 et 4</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// vert</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<h3>et</h3>
+<p>'Et' est un opérateur binaire comme 'Ou'.<br>
+Il est utilisé pour résoudre des opérations comme : i est plus grand que 2 et i est plus petit que 3. En d'autres termes, que i soit entre 2 et 3.<br>
+En AL, sa syntaxe est '&amp;&amp;'. Donc pour vérifier la condition précédente, nous allons écrire : i &gt;= 2 &amp;&amp; i &lt;= 3<br>
+Voici la table complète des possibilités :</p>
+<table class="simple">
+	<tbody><tr>
+		<td>&amp;&amp;</td>
+		<th>true</th>
+		<th>false</th>
+	</tr>
+	<tr>
+		<th>true</th>
+		<td>true</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<th>false</th>
+		<td>false</td>
+		<td>false</td>
+	</tr>
+</tbody></table>
+<p><br>Nous allons modifier l'exemple précédent afin de colorer les spots 2 et 3.<br>
+Donc nous allons tester que le compteur soit entre 2 et 3 :</p>
+<a href="./tuto1.5_files/and.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/and.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">les spots 2 et 3 sont magenta</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cache la tortue</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">&gt;=</span> <span style="color: #9933cc; font-weight: bold;">2</span> <span style="color: #cc0000;">&amp;&amp;</span> i <span style="color: #cc0000;">&lt;=</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// entre 2 et 3</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// donc 1 ou 4</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// vert</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>A noter que d'écrire 'et' et d'imbriquer les ifs ensembles revient à la même chose.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">ifs imbriqués</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> j <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">5</span> <span style="color: #cc0000;">&amp;&amp;</span> j <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// fonctionne</span><br>
+<span style="color: #cc0000;">}</span><br>
+<span style="color: #669900; font-style: italic;">// Est la même chose que :</span><br>
+<span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>j <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// fonctionne aussi</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+
+<a name="à_toi_de_jouer"></a><h2>à toi de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2><h3>spirale bicolore</h3>
+<p>Crée une spirale bicolore comme suit en testant is le compteur est à 22.</p>
+<a href="./tuto1.5_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/ex1.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="aléatoirement bicolore_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="aléatoirement bicolore_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// initialise la couleur</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">45</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+<br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">==</span> <span style="color: #9933cc; font-weight: bold;">22</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// s'exécute seulement si i est égale à 22</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// change en magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">*</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">121</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#aléatoirement bicolore_code").hide();
+			$("#aléatoirement bicolore_copy").hide();
+			$("#aléatoirement bicolore_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#aléatoirement bicolore_code").show("blind");
+							$("#aléatoirement bicolore_copy").show();
+							$("#aléatoirement bicolore_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>labyrinthe multicolore</h3>
+<p>Crée un labyrinthe multicolore, comme la figure suivante.</p>
+<a href="./tuto1.5_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/ex2.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="labyrinthe multi-color_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="labyrinthe multi-color_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// initialise la couleur</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">40</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// compteur</span><br>
+<br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">&lt;</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// vert</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">&lt;</span> <span style="color: #9933cc; font-weight: bold;">20</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">11</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cyan</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">&lt;</span> <span style="color: #9933cc; font-weight: bold;">30</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">12</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// red</span><br>
+&nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// the ten last</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">13</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// magenta</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>i <span style="color: #cc0000;">*</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#labyrinthe multi-color_code").hide();
+			$("#labyrinthe multi-color_copy").hide();
+			$("#labyrinthe multi-color_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#labyrinthe multi-color_code").show("blind");
+							$("#labyrinthe multi-color_copy").show();
+							$("#labyrinthe multi-color_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>poser une question</h3>
+<p>- demande à l'utilisateur : "aimes tu le beurre ? (oui / non)"<br>
+- s'il répond 'oui' dit : "ok, tu aimes le beurre, hmmmm c'est bon !"<br>
+- sinon dit : "oh! Tu n'aimes pas le beurre."<br>
+</p>
+<a href="./tuto1.5_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/ex3.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="pose la question_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="pose la question_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">clear</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// demande</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> answer <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputText</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"aimes tu le beurre ? (oui / non) "</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>answer <span style="color: #cc0000;">==</span> <span style="color: #9933cc;">"oui"</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"ok, tu aimes le beurre, hmmmm c'est bon !"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"oh! Tu n'aimes pas le beurre."</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#pose la question_code").hide();
+			$("#pose la question_copy").hide();
+			$("#pose la question_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#pose la question_code").show("blind");
+							$("#pose la question_copy").show();
+							$("#pose la question_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Le timide</h3>
+<p>Ecrit ton premier jeu !<br>
+Le but : deviner un nombre entre 0 et 9 choisi par l'ordinateur.<br>
+Les règles sont simples :<br>
+- pour deviner tu as 3 essais<br>
+- si tu as faux, l'ordinateur te dit si le résultat est plus grand ou plus petit.<br>
+- si tu as vrai, tu gagnes.</p>
+<a href="./tuto1.5_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.5_files/ex4.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="le timide_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="le timide_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+<li class="odd">
+21<br>	
+</li>
+<li class="even">
+22<br>	
+</li>
+<li class="odd">
+23<br>	
+</li>
+<li class="even">
+24<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">clear</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> tries <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> found <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">false</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> number <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">9</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// main loop</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">!</span>found<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> answer <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputNumber</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"trouve le nombre entre 0 et 9:"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <br>
+&nbsp; &nbsp; <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>number <span style="color: #cc0000;">&lt;</span> answer<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"non, c'est plus petit."</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span>number <span style="color: #cc0000;">&gt;</span> answer<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"non, c'est plus grand.."</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #cc0000;">}</span> <span style="color: #0099cc; font-weight: bold;">else</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"oui, tu as gagné!"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; &nbsp; found <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">true</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">if</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">!</span>found<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"pauvre joueur, tu as perdu!"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#le timide_code").hide();
+			$("#le timide_copy").hide();
+			$("#le timide_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#le timide_code").show("blind");
+							$("#le timide_copy").show();
+							$("#le timide_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><p><br>J'ai une affection particulière pour cet exercice, c'est lui qui m'a fait comprendre la programmation quand j'avais 9 - 10 ans.</p>
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.5_conditional_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>qu'est ce qu'un booléen ?</li><li>qu'est ce qu'une condition ?</li><li>quoi faire d'autre si une condition est fausse ?</li><li>qu'est ce qu'un opérateur ?</li><li>comment les employer pour changer le déroulement du programme</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>

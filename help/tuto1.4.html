@@ -1,0 +1,901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0084)http://www.algoid.net/help.php?name=tutorials&url=tuto_1.4_variables_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto1.4_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.4_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.4_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.4_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.4_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.4_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.4_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto1.4_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.4_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.4_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto1.4_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>1.4 - Variables</h1>
+		<p>Nous allons voir comment faire de la programmation dynamique avec les variables.<br>
+	Les variables sont pratiques pour changer les valeurs et les comportements du programme sans changer le code.</p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#déclaration">déclaration</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#factorisation">factorisation</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#modification">modification</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#concaténation">concaténation</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#plus_de_fun_avec_le_hasard">plus de fun avec le hasard</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#question_utilisateur">question utilisateur</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#à_vous_de_jouer">à vous de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tutorials_FR&amp;mobile=false">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2>		<p>Avant de lire ce tutoriel, il est important d'avoir lu  :&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR">1.1 - Qu'est ce qu'un programme ?</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR">1.3 - Boucles loops</a></p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Qu'est ce qu'une variable ?<br>
+Une variable est l'association entre un nom symbolique (un identifiant) et une information (une valeur).<br>
+Une variable peut être modifiée au cours de l'exécution du programme, par le programme lui-même ou lors de la réponse d'un utilisateur.<br>
+Une variable AL peut contenir différents types de valeurs :
+</p>
+<ul>
+	<li>Booléen: true (vrai), false (faux)</li>
+	<li>Nombre: 1, 2, 3, 45.7, -5, ....</li>
+	<li>Chaîne de caractère: "mon nom est Yann", "êtes vous sûr ?"</li>
+</ul>
+<p>
+C'est tout pour le moment ! Nous verrons d'autres types dans le futur.<br>
+Notez qu'une valeur Chaîne (String en anglais) se note entre guillemets (").
+</p>
+<a name="déclaration"></a><h2>déclaration<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Pour déclarer une variable, vous devez utiliser le mot clé : <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_EN#set">set</a>.<br>
+Déclarer une variable indique au programme qu'il peut dorénavant utiliser cette variable et sa valeur.<br>
+Toute la suite du programme y aura accès, mais pas ce qui est situé avant.<br>
+Pour assigner une valeur à la variable, utilise le symbole "=".
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">variable my_name:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// my_name est inconnu avant cette ligne</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> my_name<span style="color: #cc0000;">;</span><br>
+my_name <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">"yann"</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// my_name est connue et utilisable après cette ligne</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>my_name<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<br>
+<p>
+L'assignation d'une valeur peut-être faite lors de la déclaration :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">assignation directe:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #0099cc; font-weight: bold;">set</span> my_name <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">"yann"</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<a name="factorisation"></a><h2>factorisation<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Les variables peuvent être utilisées pour changer les paramètres du programme.
+Pour illustrer ceci, utilisons notre exemple du carré et modifions le ainsi :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">carré paramétré:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// taille du carré</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.4_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/ex1.png"></a><p>
+Pour le moment, rien n'a changé !<br>
+Maintenant, essaiez de changer la valeur de size par 200 et observez ce qui se passe.<br>
+La taille du carré a changée.
+</p><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">carré paramétré:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// taille du carré</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// le code suivant n'a pas changé !</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// variable utilisée ici</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.4_files/square.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/square.png"></a><p>
+Voyez vous l'avantage d'utiliser les variables ?<br>
+Vous n'avez plus à répéter la modification de la valeur partout où elle est utilisée.<br>
+Ce n'est pas le seul avantage, comme vous allez le voir.
+</p>
+<a name="modification"></a><h2>modification<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Un autre avantage à l'utilisation des variables viens de leur capacité à être modifiée par le programme.<br>
+Cela s'appelle la mutabilitée des variables.<br>
+Par exemple une variable peut avoir une valeur de 5 à un moment puis devenir 7 après un traitement du programme.<br>
+Par exemple :
+</p><p>
+</p><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">mutabilité:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #0099cc; font-weight: bold;">set</span> a <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// a est égale à 5</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+a <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// mutation</span><br>
+<span style="color: #669900; font-style: italic;">// a est maintenant égale à 7</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+<br>Une autre possibilité est d'ajouter 2 à la valeur comme ceci :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">addition:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #0099cc; font-weight: bold;">set</span> a <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// a est égale à 5</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+a <span style="color: #cc0000;">=</span> a <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// peu aussi s'écrire a += 2;</span><br>
+<span style="color: #669900; font-style: italic;">// a est maintenant égale à 7 (5 + 2) CQFD</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+<br>L'opérateur += indique que la valeur initiale vas être modifié par ajout d'un nombre.<br>
+a+= 2 signifie à "a" ajoute 2 soit l'équivalent de : a = a + 2
+Tous les opérateurs disponnibles en AL sont ici : <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_EN#expression">expression</a>
+</p>
+<a name="concaténation"></a><h2>concaténation<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Le nombre peut-être manipuée avec des opérations arithmétiques comme +, -, * (multiplié), / (divisé) etc...<br>
+Les chaînes de caractères ont un opérateur qui leur est propre : '..' pour assembler deux chaînes ensemble. Cela s'appelle la concaténation.<br>
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">concaténation de chaîne:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// chaîne 1</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> str1 <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">"salut"</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// chaîne 2</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> str2 <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">" android"</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// résultat</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> res <span style="color: #cc0000;">=</span> str1 <span style="color: #cc0000;">..</span> <span style="color: #333333;">str2</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// res = "salut android"</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>res<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+<br>L'exemple précédent crée une chaîne composée de str1 suivit de str2.<br>
+Note: comme les opérateurs numériques que nous avons vus, la concaténation fonctionne sur des variables ou directement sur les valeurs.<br>
+L'exemple précédent pourrait être écrit comme ceci :
+</p><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">concaténation de chaîne:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #0099cc; font-weight: bold;">set</span> res <span style="color: #cc0000;">=</span> <span style="color: #9933cc;">"salut"</span> <span style="color: #cc0000;">..</span> <span style="color: #9933cc;">" "</span> <span style="color: #cc0000;">..</span> <span style="color: #9933cc;">"android"</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// res = "salut android"</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span>res<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p></p>
+<a name="plus_de_fun_avec_le_hasard"></a><h2>plus de fun avec le hasard<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Les variables donnent de grandes possibilités pour manipuler les valeurs.<br>
+Une fonctionnalité intéressante est la fonction qui génère un nombre aléatoire : <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_EN#math.random">math.random()</a><br>
+Cette fonction donne un nombre au hasard compris entre 0 et les paramètres choisis.
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">hasard:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// récupère une valeur aléatoire</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> a<span style="color: #cc0000;">;</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; a <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// aléatoire entre 0 et 400</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.4_files/random.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/random.png"></a><p>
+Le programme ne vas pas toujours donner le même diamètre au cercle à chaque fois que vous l'exécutez.
+</p>
+<a name="question_utilisateur"></a><h2>question utilisateur<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><p>
+Il est également possible de demander une valeur à l'utilisateur du programme.<br>
+C'est le fondement des interfaces utilisateur.<br>
+A cet effet, AL propose deux fonctions pour interroger l'utilisateur : <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_EN#text.inputText">text.inputText (asking msg)</a> et <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_EN#text.inputNumber">text.inputNumber (asking msg)</a>.<br>
+La fonction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_EN#text.output">text.output (msg)</a> est utilisée pour envoyer un message seulement à l'utilisateur, sans attendre de réponse.
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">question:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// récupère le nombre choisi</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> a <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputNumber</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"quel nombre désirez vous ?"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"vous avez choisi: "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">a</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.4_files/asking.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/asking.png"></a>
+<a name="à_vous_de_jouer"></a><h2>à vous de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2><h3>Cube paramétré</h3>
+<p>Demandez à l'utilisateur la taille du cube et dessinez le avec la valeur qu'il a choisi.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="user_square_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="user_square_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// demandez à l'utilisateur</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputNumber</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"quel taille désirez vous ?"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"vous avez choisi: "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">size</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// dessin du cube à la taille choisie</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#user_square_source_code").hide();
+			$("#user_square_source_copy").hide();
+			$("#user_square_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#user_square_source_code").show("blind");
+							$("#user_square_source_copy").show();
+							$("#user_square_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Forme aléatoire</h3>
+<p>Dessinez une forme avec 4 cotés de 4 angles différents</p>
+<a href="./tuto1.4_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/ex2.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="random_square_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="random_square_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// dessin d'une forme aux angles aléatoires</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#random_square_source_code").hide();
+			$("#random_square_source_copy").hide();
+			$("#random_square_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#random_square_source_code").show("blind");
+							$("#random_square_source_copy").show();
+							$("#random_square_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><p>Exécutez ce programme plusieurs fois pour voir ce qu'il fait.</p>
+
+<h3>Variation de la forme aléatoire</h3>
+<p>Dessinez une forme avec 4 cotés et pour chaque coté le même angle, mais choisi initialement au hasard</p>
+<a href="./tuto1.4_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/ex3.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="same_random_square_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="same_random_square_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// déterminez l'angle</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> a <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// dessinez le cube avec l'angle</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#same_random_square_source_code").hide();
+			$("#same_random_square_source_copy").hide();
+			$("#same_random_square_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#same_random_square_source_code").show("blind");
+							$("#same_random_square_source_copy").show();
+							$("#same_random_square_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><p>Exécutez ce programme plusieurs fois pour voir ce qu'il fait.</p>
+
+<h3>Demandez le nom de l'utilisateur et dites lui "bonjour [nom]".</h3>
+<a href="./tuto1.4_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/ex4.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="name_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="name_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// demandez à l'utilisateur</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> name <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputText</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"Quel est votre nom ?"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"Bonjour "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">name</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#name_code").hide();
+			$("#name_copy").hide();
+			$("#name_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#name_code").show("blind");
+							$("#name_copy").show();
+							$("#name_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Labyrinthe</h3>
+<p>Jouez avec la variable size en l'incrémentant de 10 en 10 (size = size + 10) afin d'obtenir la figure suivante :<br>
+</p>
+<a href="./tuto1.4_files/ex5.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/ex5.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="maze_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="maze_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// labyrinthe</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// initialisez la variable</span><br>
+<span style="color: #669900; font-style: italic;">// boucle de la spirale</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">45</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; size <span style="color: #cc0000;">=</span> size <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#maze_source_code").hide();
+			$("#maze_source_copy").hide();
+			$("#maze_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#maze_source_code").show("blind");
+							$("#maze_source_copy").show();
+							$("#maze_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Spirale Triangulaire</h3>
+<p>Avec un angle de 121°, quel est le résultat ?</p>
+<a href="./tuto1.4_files/ex7.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.4_files/ex7.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="spiral1_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="spiral1_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// spirale</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// initialisez la variable</span><br>
+<span style="color: #669900; font-style: italic;">// boucle de la spirale</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">45</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; size <span style="color: #cc0000;">=</span> size <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">121</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#spiral1_source_code").hide();
+			$("#spiral1_source_copy").hide();
+			$("#spiral1_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#spiral1_source_code").show("blind");
+							$("#spiral1_source_copy").show();
+							$("#spiral1_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><p>Vous pouvez aussi jouer avec le hasard sur l'angle : set angle = math.random(360);</p>
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>qu'est-ce qu'une variable ?</li><li>comment les créer et les utiliser pour rendre les programmes dynamiques ?</li><li>comment ajouter du fun avec les valeurs aléatoires ?</li><li>comment poser une question à l'utilisateur ?</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>

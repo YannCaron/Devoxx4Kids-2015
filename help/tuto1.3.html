@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0079)http://www.algoid.net/help.php?name=tutorials&url=tuto_1.3_loop_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto1.3_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.3_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.3_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.3_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.3_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.3_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.3_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto1.3_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.3_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.3_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto1.3_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>1.3 - Boucles loops</h1>
+		<p><span class="warning">Attention ! L'instruction impérative 'Loop' n'est disponible qu'à partir de la version 0.4.0 d'Algoid.</span><br><br>
+Nous avons vu comment écrire une séquence d'instructions pour faire un programme.<br>
+Mais avez vous remarqué comme il est difficile et pénible d'écrire plusieurs fois la même séquence d'instructions ?<br>
+Loop vas nous aider à réduire la quantité de code en faisant répéter l'exécution du programme.<br>
+C'est la première instruction qui va nous permettre de jouer sur l'ordre dans lequel le programme est exécuté.</p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#bloc">bloc</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#loop">loop</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#à_vous_de_jouer">à vous de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tutorials_FR&amp;mobile=false">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2>		<p>Avant de lire ce tutoriel, il est important d'avoir lu  :&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR">1.1 - Qu'est ce qu'un programme ?</a></p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2><p>
+Qu'est ce qu'une boucle ?<br>
+Une boucle va répéter un nombre de fois une portion du code.<br>
+Cette portion est contenue dans un <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#block">block</a>.
+</p>
+
+<a name="bloc"></a><h2>bloc<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2><p>
+Un bloc regroupe une portion de code comme si c'était une seule instruction.<br>
+Ce code est groupé avec des accolades {}.<br>
+En AL, à chaque fois que vous verrez {} cela voudra dire que c'est un nouveau groupe d'instructions.
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">bloc&nbsp;:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// bloc</span><br>
+<span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// Dans le bloc, instruction 1</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// Dans le bloc, instruction 2</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<a name="loop"></a><h2>loop<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2><p>
+L'instruction de boucle 'Loop' est une instruction simple, mais très utile.<br>
+Elle permet, nous l'avons vu, de répéter une instruction ou un bloc.<br>
+Une limite est nécessaire pour savoir combien de fois le bloc va-t-être répété.<br>
+</p><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">encore un carré 1:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// encore un carré</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+<span style="color: #669900; font-style: italic;">// fin de la boucle</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.3_files/square.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.3_files/square.png"></a>
+<a name="à_vous_de_jouer"></a><h2>à vous de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2>
+<h3>Un triangle maintenant</h3>
+<p>Dessine un triangle grâce à la boucle.<br>
+<b>indice : </b>Un triangle équilatéral (qui a 3 côtés identiques) a également 3 angles identiques de 120° &lt;=&gt; (360 / 3) chacun.</p>
+<a href="./tuto1.3_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.3_files/ex1.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="triangle_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="triangle_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// boucle 3 fois</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// une rotation complète (360) divisé par le nombre de côtés</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#triangle_source_code").hide();
+			$("#triangle_source_copy").hide();
+			$("#triangle_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#triangle_source_code").show("blind");
+							$("#triangle_source_copy").show();
+							$("#triangle_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Un pentagone maintenant</h3>
+<p>Dessine un pentagone : il est composé de 5 côtés.</p>
+<a href="./tuto1.3_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.3_files/ex2.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="pentagone_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="pentagone_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// boucle 5 fois</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// une rotation complète (360) divisé par le nombre de côtés</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#pentagone_source_code").hide();
+			$("#pentagone_source_copy").hide();
+			$("#pentagone_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#pentagone_source_code").show("blind");
+							$("#pentagone_source_copy").show();
+							$("#pentagone_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Etoile avec des lignes</h3>
+<p>Dessine une étoile où chaque branche est représentée par des lignes.<br>
+Les instructions pour dessiner une ligne et revenir au point de départ sont :</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">une ligne:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// dessine une ligne</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// demi-tour</span><br>
+<span style="color: #669900; font-style: italic;">// retour à la position initiale</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// retourne à l'angle de départ</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// demi-tour</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.3_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.3_files/ex3.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="line_star_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="line_star_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// loop for each branches</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">20</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// draw branch</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// u turn</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// return to original orientation</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// u turn</span><br>
+&nbsp; <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// turn for other</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> <span style="color: #9933cc; font-weight: bold;">20</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// une rotation complète (360) divisé par le nombre de branche</span><br>
+<br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#line_star_source_code").hide();
+			$("#line_star_source_copy").hide();
+			$("#line_star_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#line_star_source_code").show("blind");
+							$("#line_star_source_copy").show();
+							$("#line_star_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Une étoile est née</h3>
+<p>Dessine une vraie étoile cette fois.<br>
+Les instructions pour dessiner une branche sont :</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">une branche&nbsp;:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// dessine une branche</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">60</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">60</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<a href="./tuto1.3_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.3_files/ex4.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="star_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="star_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// cache algo</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">60</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">60</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> <span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// une rotation complète (360) divisé par le nombre de branche</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#star_source_code").hide();
+			$("#star_source_copy").hide();
+			$("#star_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#star_source_code").show("blind");
+							$("#star_source_copy").show();
+							$("#star_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>qu'est ce qu'une boucle ?</li><li>qu'est ce qu'un bloc d'instruction ?</li><li>comment répéter ce bloc d'instructions</li><li>comment utiliser les boucles pour créer des dessins plus jolis ?</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>

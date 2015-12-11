@@ -1,0 +1,1330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0083)http://www.algoid.net/help.php?name=tutorials&url=tuto_2.1_function_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto2.1_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto2.1_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto2.1_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto2.1_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto2.1_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto2.1_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto2.1_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto2.1_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto2.1_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto2.1_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto2.1_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>2.1 - Fonctions</h1>
+		<p>Ce tutoriel montre qu'est ce qu'une fonction et comment l'utiliser pour créer un code plus élégant et surtout réutilisable.</p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#portées">portées</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#fonctions">fonctions</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#paramères">paramères</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#retour">retour</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#fonctions_anonymes">fonctions anonymes</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#à_toi_de_jouer">à toi de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tutorials_FR&amp;mobile=false">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2>		<p>Avant de lire ce tutoriel, il est important d'avoir lu  :&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR">1.3 - Boucles loops</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR">1.4 - Variables</a></p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2><p>
+Qu'est-ce qu'une fonction est quel est son rôle ?<br>
+Il y a longtemps, les fonctions étaient appelées sous-routine, ou sous-programme. Et c'était vrai, en réalité les fonctions sont des "morceaux" de programme indépendants.<br>
+Donc la fonction est un groupe de ligne de code qui est capable de faire quelque chose de spéciale.<br>
+L'avantage des fonctions c'est qu'elles peuvent être utilisées autant de fois que l'on veut.
+Ok, mais pourquoi indépendantes ? Parce que les fonctions possèdent leurs propres portées.... Oui, mais une portée c'est quoi au juste ?
+</p>
+<a name="portées"></a><h2>portées<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2><p>
+Dans le tutoriel des loop, nous avons vu qu'un bloque contenait des lignes de codes.<br>
+Il représente un groupe d'instruction afin de créer un comportement composé de plusieures autres comportements.<br>
+
+L'autre propriété d'un bloque, c'est que toute variable créer à l'intérieur n'est visible que là et à l'intérieur d'un bloque imbriqué à celui-ci ; lorsque le programme arrive à l'extérieur du bloque les valeurs sont perdus et les variables deviennent inaccessibles.<br>
+C'est ce que l'on appelle la portée d'un bloque.<br> Et un bloque définit à l'intérieur d'un autre définit en réalité une portée imbriquée à une autre.<br>
+En fait, la seule portée qui ne soit pas imbriquée à une autre est la portée root. La portée root est la première portée du programme. Lorsque Algoid lance un programme, il créer une portée par défaut qui est la portée parente de toutes les autres que l'on appelle root (ou racine).<br>
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">scope:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// dans la portée root</span><br>
+<span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// dans la première portée imbriquée à root</span><br>
+&nbsp; <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// dans la seconde portée imbriquée à la première elle-même imbriquée à root.</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// retour à la première portée</span><br>
+<span style="color: #cc0000;">}</span><br>
+<span style="color: #669900; font-style: italic;">// retour à la portée root, à la racine (Je pense que nous devrions lol.)</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+Mais qu'en est-il de l'accès aux variables ?
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">scope:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+<li class="odd">
+21<br>	
+</li>
+<li class="even">
+22<br>	
+</li>
+<li class="odd">
+23<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #669900; font-style: italic;">// rien n'est accessible ici</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> a<span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// maintenant a est accessible</span><br>
+<span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// a est toujours accessible</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> b<span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// a est toujours accessible</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// b ext maintenant accessible</span><br>
+&nbsp; <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// a est toujours accessible</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// b est toujours accessible</span><br>
+&nbsp; &nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> c<span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// a est toujours accessible</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// b est toujours accessible</span><br>
+&nbsp; &nbsp; <span style="color: #669900; font-style: italic;">// c est maintenant accessible</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// a est toujours accessible</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// b est toujours accessible</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// mais plus c</span><br>
+<span style="color: #cc0000;">}</span><br>
+<span style="color: #669900; font-style: italic;">// seul a est accessible ici, b et c ne le sont plus</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+Donc, comme les fonctions ont leur propre portée, chaque variable créer à l'intérieur n'est pas accessible ailleurs.
+</p>
+<a name="fonctions"></a><h2>fonctions<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2><p>
+Une fonction peu-t-être déclaré comme cela :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">function:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+<br>Nous reconnaissons les {} qui définissent un bloque (et donc une portée).<br>
+Mais quelle est la différence entre une fonction et un simple bloque ?<br>
+La différence est : une fonction peut avoir un identifiant (un nom de variable en AL) et peut être appelée depuis un autre point du programme (si sa variable est accessible, rapellons nous la portée).
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">encore un autre carré:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> square <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// utilisation</span><br>
+square<span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">150</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+square<span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto2.1_files/2squares.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/2squares.png"></a><p>
+Intéressant. Nous sommes maintenant capable de dessiner un carré chaque fois que nous le souhaitons.<br>
+Pour appeller une fonction, nous avons seulement besoin de fournir son nom suivi par des parenthèses ().<br><br>
+Note : en AL les fonctions peuvent être déclarées sans être assignées à une variable.<br>
+Ce n'est pas le cas dans la plupart des langages comme Java, c, c++, pascal et bien d'autres qui définissent les fonctions comme cela :<br>
+void function square () { .... }<br>
+Ok, j'assume complément ce choix !!! Nous verrons pourquoi dans d'autres tutoriels à propos de la programmation fonctionnelle.<br>
+Ce choix n'est certe pas conventionnel, mais tellement puissant en réalité.... Je n'en dis pas plus pour le moment.
+</p>
+<a name="paramères"></a><h2>paramères<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2><p>
+Nous avons vu que nous avions besoin des parenthèses pour déclarer une fonction et l'appeler.<br>
+Pourquoi avons nous besoin de parenthèses ?<br>
+Et bien pour déclarer les paramètres de la fonction.<br>
+Nous avons vu que la fonction définissait sa propre portée.<br>
+Et bien pour passer des valeurs nous avons besoin d'une solution. Cette solution c'est les paramètres.<br><br>
+Immaginons que nous ayons besoin de dire à notre cube quelle taille à chaqun de ses coté :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">square parameter:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> square <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// utilisation</span><br>
+square<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+square<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+square<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">150</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+square<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto2.1_files/squareSize.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/squareSize.png"></a><p>
+<br>Yeah.... donc nous pouvons réutiliser un bloque de code et il devient possible d'en modifier quelques-unes de ses propriétés.<br>
+Maintenant nous pouvons imaginer beaucoup de choses. Pourquoi pas changer le nombre de coté lui même ?<br>
+Ok, ce n'est plus un carré, mais un polygone :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">polygon:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> polygon <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">,</span> size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> number<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// il devient imporant de changer les angles. Souvenons nous, un tour complet fait 360 degrés.</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// utilisation</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+polygon<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// rien n'a changé, c'est toujours un carré</span><br>
+polygon<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// oui mais ....</span><br>
+polygon<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// et pourquoi pas ....</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto2.1_files/poly1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/poly1.png"></a><p>
+<br>Joue avec les paramètres pour créer d'amusantes géométries.<br>
+Donc, lorsque l'on définit notre programme avec des fonctions, elles peuvent avoir autant de paramètre que nous le souhaitons.<br>
+Il devient aussi possible de les combiner avec des variables comme ceci :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">polygon loop:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> polygon <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">,</span> size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> number<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// utilisons la dans une boucle</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">&lt;</span> <span style="color: #9933cc; font-weight: bold;">8</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; polygon <span style="color: #cc0000;">(</span>i<span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto2.1_files/poly2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/poly2.png"></a><p>
+<br>Les possibilités sont infinies. Cela dépendra juste de notre imagination.
+</p>
+<a name="retour"></a><h2>retour<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2><p>
+Maintenant, imaginons que nous ayons besoin de créer une fonction pour calculer quelque chose.<br>
+Nous voulons traiter le résultat de ce calcul. Comment est-il possible de le récupérer.<br>
+Et bien, avec l'instruction return.
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">operation 1:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> add5times <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">,</span> b<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> res <span style="color: #cc0000;">=</span> <span style="color: #cc0000;">(</span>a <span style="color: #cc0000;">+</span> b<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">*</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">return</span> res<span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">ui</span><span style="color: #cc0000;">.</span><span style="color: #333333;">showLog</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">util</span><span style="color: #cc0000;">.</span><span style="color: #333333;">log</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"(1 + 2) * 5 = "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">add5times</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">util</span><span style="color: #cc0000;">.</span><span style="color: #333333;">log</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"(2 + 3) * 5 = "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">add5times</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto2.1_files/operation1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/operation1.png"></a><p>
+<br>La fonction renvoie un résultat qui va être utilisé lors de la concaténation pour écrir dans le logger d'Algoid.<br>
+Comme toute valeur du langage, il est aussi possible d'utiliser le retour d'une fonction comme paramètre d'une autre ou de l'assigner à une variable.
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">operation 2:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> add <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">,</span> b<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">return</span> a <span style="color: #cc0000;">+</span> b<span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> sub <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>a<span style="color: #cc0000;">,</span> b<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">return</span> a <span style="color: #cc0000;">-</span> b<span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">ui</span><span style="color: #cc0000;">.</span><span style="color: #333333;">showLog</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// calculer (1 + 2) - 3</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> res <span style="color: #cc0000;">=</span> sub <span style="color: #cc0000;">(</span>add <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">util</span><span style="color: #cc0000;">.</span><span style="color: #333333;">log</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"(1 + 2) - 3 = "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">res</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// calculer (1 + 2) - (8 - 7)</span><br>
+res <span style="color: #cc0000;">=</span> sub <span style="color: #cc0000;">(</span>add <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">,</span> sub <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">8</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">util</span><span style="color: #cc0000;">.</span><span style="color: #333333;">log</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"(1 + 2) - (8 - 7) = "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">res</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// ect.... ect....</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto2.1_files/operation2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/operation2.png"></a><p>
+<br>Conclusion, les paramètres sont les entrées de la fonction et le retour en est la sortie.<br>
+Une fonction, en AL et dans bien d'autres langages, accepte plusieurs paramètres en entrée et une seule valeur de retour (mais il est possible de contourner cette limitation avec les tableaux, à voir dans un prochain tutoriel).<br>
+</p>
+<a name="à_toi_de_jouer"></a><h2>à toi de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2><h3>ex1: réutilisation du carré</h3>
+<p>
+Ré-utilise la fonction square (carré) afin de dessiner un groupe de 4 carrés comme ceci :<br>
+<a href="./tuto2.1_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/ex1.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="4squares_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="4squares_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> square <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; square<span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+<span style="color: #669900; font-style: italic;">// utilise la fonction step by step pour comprendre comme cela fonctionne</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#4squares_code").hide();
+			$("#4squares_copy").hide();
+			$("#4squares_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#4squares_code").show("blind");
+							$("#4squares_copy").show();
+							$("#4squares_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex2: réutilisation de l'exercice précédent</h3>
+<p>
+Ré-utilise l'exercice précédent pour créer une fonction afin d'obtenir :<br>
+<a href="./tuto2.1_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/ex2.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="12of4squares_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="12of4squares_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> square <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">set</span> squareGroup <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; square<span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// la fonction appelle une autre fonction</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><br>
+<br>
+squareGroup<span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">45</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+squareGroup<span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#12of4squares_code").hide();
+			$("#12of4squares_copy").hide();
+			$("#12of4squares_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#12of4squares_code").show("blind");
+							$("#12of4squares_copy").show();
+							$("#12of4squares_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex3: escalier</h3>
+<p>
+Merci à Jean-Philippe Lemariey pour cet exemple. Dessine la figure suivante avec deux fonctions (marche et escalier) :<br>
+<a href="./tuto2.1_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/ex3.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="stairCase1_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="stairCase1_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> marche <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">set</span> escalier <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">,</span> size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; marche<span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><br>
+<br>
+<span style="color: #000000;">ui</span><span style="color: #cc0000;">.</span><span style="color: #333333;">showAlgo</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">goTo</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">-</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+escalier<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+marche<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#stairCase1_code").hide();
+			$("#stairCase1_copy").hide();
+			$("#stairCase1_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#stairCase1_code").show("blind");
+							$("#stairCase1_copy").show();
+							$("#stairCase1_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex4: escalier</h3>
+<p>
+Cela me donne immédiatement une idée :<br>
+<a href="./tuto2.1_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/ex4.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="stairCase2_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="stairCase2_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+<li class="odd">
+21<br>	
+</li>
+<li class="even">
+22<br>	
+</li>
+<li class="odd">
+23<br>	
+</li>
+<li class="even">
+24<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> marche <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">set</span> escalier <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">,</span> size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; marche<span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><br>
+<br>
+<span style="color: #000000;">ui</span><span style="color: #cc0000;">.</span><span style="color: #333333;">showAlgo</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">goTo</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">-</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+escalier<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+escalier<span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#stairCase2_code").hide();
+			$("#stairCase2_copy").hide();
+			$("#stairCase2_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#stairCase2_code").show("blind");
+							$("#stairCase2_copy").show();
+							$("#stairCase2_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex5: géométrie aléatoire</h3>
+<p>
+Ré-utilise notre polygone pour dessiner des géométries aléatoires comme ceci :<br>
+<a href="./tuto2.1_files/ex5.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto2.1_files/ex5.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="random_poly_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="random_poly_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+<li class="odd">
+21<br>	
+</li>
+<li class="even">
+22<br>	
+</li>
+<li class="odd">
+23<br>	
+</li>
+<li class="even">
+24<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> polygon <span style="color: #cc0000;">=</span> <span style="color: #0099cc; font-weight: bold;">function</span> <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">,</span> size<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; loop <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> number<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+<span style="color: #cc0000;">}</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">ui</span><span style="color: #cc0000;">.</span><span style="color: #333333;">showAlgo</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// création des variables locales</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> x <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">-</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> y <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">-</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> number <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">set</span> color <span style="color: #cc0000;">=</span> <span style="color: #000000;">math</span><span style="color: #cc0000;">.</span><span style="color: #333333;">random</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">16</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+&nbsp; <span style="color: #669900; font-style: italic;">// dessin</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span><span style="color: #cc0000;">(</span>color<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">goTo</span><span style="color: #cc0000;">(</span>x<span style="color: #cc0000;">,</span> y<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; polygon <span style="color: #cc0000;">(</span>number<span style="color: #cc0000;">,</span> size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#random_poly_code").hide();
+			$("#random_poly_copy").hide();
+			$("#random_poly_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#random_poly_code").show("blind");
+							$("#random_poly_copy").show();
+							$("#random_poly_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_2.1_function_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>qu'est-ce qu'une portée ?</li><li>qu'est-ce qu'une fonction ?</li><li>comment ré-écrire les exemples précédents avec les fonctions ?</li><li>comment les utilisés pour créer du code plus élégant et réutilisable ?</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>

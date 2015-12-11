@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0080)http://www.algoid.net/help.php?name=tutorials&url=tuto_1.1_intro_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto1.1_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.1_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.1_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.1_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.1_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.1_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.1_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto1.1_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.1_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.1_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto1.1_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>1.1 - Qu'est ce qu'un programme ?</h1>
+		<p>Dans ce tutoriel nous allons découvrir comment la tortue d'Algoid peut voyager au travers son environnement.<br>
+Il couvre les déplacements et rotations de la petite tortue qui va pouvoir effectuer d'amusantes formes géométriques.<br></p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#déplacement_et_environnement">déplacement et environnement</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#rotation">rotation</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#à_vous_de_jouer">à vous de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2>		<p>Aucun prérequis n'est nécessaire pour lire ce tutoriel à part l'application Algoid ;-)</p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2><p>
+Qu'est-ce qu'un programme ?<br>
+Eh bien, un programme d'ordinateur, c'est une suite d'instructions écrites pour demander à un ordinateur de faire des choses pour nous.<br>
+Quand j'étais petit, je pensais qu'il suffisait de parler à l'ordinateur pour qu'il fasse ce que je lui demande.<br>
+Beaucoup de gens aimeraient bien que ça se passe ainsi et beaucoup de travaux sont faits dans ce sens.<br>
+Mais pour le moment il va falloir se contenter d'utiliser un langage que l'ordinateur comprend.<br>
+Un programme, c'est donc une séquence d'instructions compréhensibles par la machine. Cette séquence s'appelle un code source.<br>
+Programmer c'est donc le fait d'imaginer et d'écrire le code source d'un programme.<br>
+Après écriture, le programme est exécuté par la machine qui fait ce que nous lui avons demandé (du moins la plupart du temps).<br>
+En AL, les lignes sont séparées par un point-virgule « ; », mais ce n'est pas obligatoire. Une bonne pratique consiste à les utiliser et de séparer les lignes avec un retour chariot en plus.
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Voici un exemple de programme AL&nbsp;:</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+Note : Pour exécuter le programme, il faut utiliser <span style="font-style: italic">menu</span> puis <span style="font-style: italic">run</span>.<br>
+Nous pouvons également supprimer le mode pas à pas en décochant <span style="font-style: italic">menu / exécution / pas à pas.</span>. Qu'est-ce que ça nous donne ?<br>
+</p>
+<div class="synhi-block">
+	<div class="synhi-block-title">Déplacements :</div>
+	<div class="synhi-code">
+		La tortue avance de 100 points<br>
+		La tortue tourne sur <b>sa</b> droite de 90 degrées.<br>
+		La tortue avance de 100 points<br>
+	</div>
+</div>
+<br>
+<p>
+Quel est le résultat de ces quelques lignes ?
+<a href="./tuto1.1_files/intro1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/intro1.png"></a></p>
+<a name="moving"></a>
+
+<a name="déplacement_et_environnement"></a><h2>déplacement et environnement<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2><p>La tortue d'Algoid peut bouger en mode relatif ; sa position est déterminée par sa position précédente et son orientation.<br>
+Dans l'exemple précédent, la tortue était orientée vers le haut de l'écran à la position 0, 0 (le centre).<br>
+Nous avons bougé la tortue en avant avec l'instruction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.go">algo.go (100)</a> et la tortue l'a exécuté en se déplaçant à la position 0, 100.<br>
+<a href="./tuto1.1_files/go1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/go1.png"></a></p>
+<a name="rotation"></a>
+
+<a name="rotation"></a><h2>rotation<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2><p>La tortue peut s'orienter dans un mode relatif également. Son orientation est déterminée par sa précédente orientation en ajoutant la nouvelle.<br>
+Dans l'exemple précédent, la tortue était initialement orientée de 0 ° et a été tournée sur la droite de 90 °.<br>
+Les angles se mesurent de 0 ° à 360 °. 360 représente un tour complet, c'est-à-dire qu'il correspond à 0 °.<br>
+Pour faire tourner la tortue à droite, nous devons utiliser l'instruction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.turnRight">algo.turnRight ()</a> :<br>
+<a href="./tuto1.1_files/angle1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/angle1.png"></a><br>
+Pour faire tourner la tortue à gauche, il faut utiliser l'instruction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.turnLeft">algo.turnLeft ()</a> :<br>
+<a href="./tuto1.1_files/angle2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/angle2.png"></a><br>
+La solution la plus simple est d'utiliser ces deux fonctions de 0 à 180 °.<br>
+<a href="./tuto1.1_files/angle3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/angle3.png"></a></p>
+<h3>relativité</h3>
+<p>
+Eurêka ! Tout est relatif !<br>
+La façon relative de déterminer la position d'un point dans l'espace s'appelle <a target="_blank" href="http://http//fr.wikipedia.org/wiki/Espace_euclidien">l'espace euclidien</a>.<br>
+Chaque fois que la tortue est bougée et tournée, sa référence change et cela va influencer la position future.<br>
+Par exemple, si la tortue a déjà été tournée de 45 ° avec l'instruction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.turnRight">algo.turnRight ()</a>, son nouveau référentiel va être :<br>
+<a href="./tuto1.1_files/angle4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/angle4.png"></a></p>
+
+<a name="sketches"></a>
+<a name="à_vous_de_jouer"></a><h2>à vous de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2><h3>ex1: un carré</h3>
+<p>
+Dessinons un petit carré maintenant. Il faut écrire un script pour dessiner la figure suivante : <br>
+<a href="./tuto1.1_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/ex1.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="square_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="square_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// segment gauche</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// segment supérieur</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// segment droit</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// segment inférieur</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#square_source_code").hide();
+			$("#square_source_copy").hide();
+			$("#square_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#square_source_code").show("blind");
+							$("#square_source_copy").show();
+							$("#square_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><br>
+<h3>ex2: un escalier</h3>
+<p>
+Dessinons un petit escalier. Il faut écrire un script pour dessiner la figure suivante : <br>
+<a href="./tuto1.1_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/ex2.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="starecase_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="starecase_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+<li class="odd">
+21<br>	
+</li>
+<li class="even">
+22<br>	
+</li>
+<li class="odd">
+23<br>	
+</li>
+<li class="even">
+24<br>	
+</li>
+<li class="odd">
+25<br>	
+</li>
+<li class="even">
+26<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// base</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 1</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 2</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 3</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 4</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// fermeture</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#starecase_source_code").hide();
+			$("#starecase_source_copy").hide();
+			$("#starecase_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#starecase_source_code").show("blind");
+							$("#starecase_source_copy").show();
+							$("#starecase_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><br>
+<h3>ex3: une pyramide</h3>
+<p>
+Il faut écrire un script pour dessiner la figure suivante : <br>
+<a href="./tuto1.1_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/ex3.png"></a></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="pyramid_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="pyramid_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+<li class="odd">
+19<br>	
+</li>
+<li class="even">
+20<br>	
+</li>
+<li class="odd">
+21<br>	
+</li>
+<li class="even">
+22<br>	
+</li>
+<li class="odd">
+23<br>	
+</li>
+<li class="even">
+24<br>	
+</li>
+<li class="odd">
+25<br>	
+</li>
+<li class="even">
+26<br>	
+</li>
+<li class="odd">
+27<br>	
+</li>
+<li class="even">
+28<br>	
+</li>
+<li class="odd">
+29<br>	
+</li>
+<li class="even">
+30<br>	
+</li>
+<li class="odd">
+31<br>	
+</li>
+<li class="even">
+32<br>	
+</li>
+<li class="odd">
+33<br>	
+</li>
+<li class="even">
+34<br>	
+</li>
+<li class="odd">
+35<br>	
+</li>
+<li class="even">
+36<br>	
+</li>
+<li class="odd">
+37<br>	
+</li>
+<li class="even">
+38<br>	
+</li>
+<li class="odd">
+39<br>	
+</li>
+<li class="even">
+40<br>	
+</li>
+<li class="odd">
+41<br>	
+</li>
+<li class="even">
+42<br>	
+</li>
+<li class="odd">
+43<br>	
+</li>
+<li class="even">
+44<br>	
+</li>
+<li class="odd">
+45<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// moitié gauche de la base</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 1</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 2</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 3</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 4</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 5</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 6</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 7</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// marche 8</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// moitié gauche de la base</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#pyramid_source_code").hide();
+			$("#pyramid_source_copy").hide();
+			$("#pyramid_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#pyramid_source_code").show("blind");
+							$("#pyramid_source_copy").show();
+							$("#pyramid_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex4: une autre pyramide</h3>
+<p>
+Ecrit un script pour dessiner la figure suivante : <br>
+<a href="./tuto1.1_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.1_files/ex4.png"></a>Indice : Pour faire un tour complet, la tortue doit tourner de 360°. Il faut donc tourner de 360 / 3 = 120° pour chaque segment de droite.<br>
+120° c'est l'angle opposé à celui du triangle (120° + 60° = 180°).<br>
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="pyramid2_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="pyramid2_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// moitié gauche de la base</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// coté gauche</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// 360 / 3</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// coté droit</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// moitié droite de la base</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#pyramid2_source_code").hide();
+			$("#pyramid2_source_copy").hide();
+			$("#pyramid2_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#pyramid2_source_code").show("blind");
+							$("#pyramid2_source_copy").show();
+							$("#pyramid2_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><br>
+
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>Qu'est ce qu'un programme ?</li><li>Comment effectuer quelques dessins amusants avec des instructions très simples.</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>

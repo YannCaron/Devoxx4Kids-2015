@@ -1,0 +1,1032 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0078)http://www.algoid.net/help.php?name=tutorials&url=tuto_1.6_for_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto1.6_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.6_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.6_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.6_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.6_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.6_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.6_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto1.6_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.6_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.6_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto1.6_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>1.6 - Boucle for</h1>
+		<p>Nous avons vu comment faire quelques boucles avec l'instruction 'loop'.<br>
+Il serait interessant et util de connaitre dans quel tour nous sommes, n'est-ce pas ?<br>
+C'est ce que nous avions fait dans le tutoriel sur le conditionnel.<br>
+'For' est une instruction qui va nous aider à faire cela.</p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#for">for</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#étape">étape</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#compte_à_rebours">compte à rebours</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#à_toi_de_jouer">à toi de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tutorials_FR&amp;mobile=false">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2>		<p>Avant de lire ce tutoriel, il est important d'avoir lu  :&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR">1.1 - Qu'est ce qu'un programme ?</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.3_loop_FR">1.3 - Boucles loops</a>,&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.4_variables_FR">1.4 - Variables</a></p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2><p>
+Nous avons vu ce qu'était une boucle<br>
+Il est possible, mais peu intuitif, de connaitre le numéro de décompte lorsque le programme est dans la boucle.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">boucle loop:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// initialisation</span><br>
+loop <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span> <span style="color: #669900; font-style: italic;">// boucle tant que le compteur est &lt; 4</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"le tour actuel est "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">i</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; i<span style="color: #cc0000;">++;</span> <span style="color: #669900; font-style: italic;">// equivaut à i = i + 1</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p><br>Note sur le code précédent : la boucle fonctionne 4 fois.<br>
+Donc i est initialisé à 0 et est incrémenté 4 fois donc : <span class="warning">0, 1, 2, 3</span><br>
+Pas 4, parce que 0 est considéré comme une itération.<br>
+Ce comportement n'est pas intuitif, mais il est du au fait que l'initialisation soit à 0 et que l'incrémentation s'effectue à la fin de la boucle comme ici.<br>
+En fait si j'ai donné cet exemple, c'est que la boucle 'for' fonctionne de la même manière.</p>
+<p>
+<br>
+L'instruction 'for' est conçu pour faire cela sur une seule ligne.<br>
+Elle permet de déclarer la variable, de l'initialiser et de l'incrémenter à chaque tour.<br>
+Le code suivant peu-t-être traduit de la sorte :</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">for sur une ligne:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span> <span style="color: #669900; font-style: italic;">/* initialisation */</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">&lt;</span> <span style="color: #9933cc; font-weight: bold;">4</span> <span style="color: #669900; font-style: italic;">/* condition */</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">=</span> i <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">1</span> <span style="color: #669900; font-style: italic;">/* incrémentation */</span><span style="color: #cc0000;">)</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"le tour actuel est "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">i</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p><br>Notons que i = i + 1; peu-t-être écrit i++;</p>
+
+<a name="for"></a><h2>for<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2><h3>for</h3>
+<p>
+'for' est une instruction complexe mais utile.<br>
+Elle sert à répéter plusieurs fois une instruction (ou, nous l'avons vu, un bloque).<br>
+'for' est construit comme suivant :<br>
+for ([initialisation de la variable]; [condition de sortie]; [itération]) [instruction(s)]<br>
+La séquence du programme est :</p>
+<ul>
+	<li>1 D'abord la variable est initialisée.</li>
+	<li>2 La condition est vérifiée, si ok, alors on continue, sinon exit.</li>
+	<li>3 La variable est itérée.</li>
+	<li>4 Allez à 2.</li>
+</ul>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">encore un carré:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// encore un carré</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">&lt;</span> <span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">=</span> i <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+<span style="color: #669900; font-style: italic;">// fin de la boucle</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.6_files/square.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/square.png"></a><div class="synhi-block">
+	<div class="synhi-block-title">Traduction:</div>
+	<div class="synhi-code">
+		Initialisation, création de la variable i et met i à 0<br><br>
+		
+		Vérifie si i est inférieur à 4, oui il l'est <b>0</b> ? Ok continue<br>
+		Avance de 100<br>
+		Tourne à droite de 90°<br>
+		Itère, i = i + 1 donc i = <b>0</b> + 1 =&gt; i = <b>1</b><br><br>
+
+		Vérifie si i est inférieur à 4, oui il l'est <b>1</b> ? Ok continue<br>
+		Avance de 100<br>
+		Tourne à droite de 90°<br>
+		Itère, i = i + 1 donc i = <b>1</b> + 1 =&gt; i = <b>2</b><br><br>
+
+		Vérifie si i est inférieur à 4, oui il l'est <b>2</b> ? Ok continue<br>
+		Avance de 100<br>
+		Tourne à droite de 90°<br>
+		Itère, i = i + 1 donc i = <b>2</b> + 1 =&gt; i = <b>3</b><br><br>
+
+		Vérifie si i est inférieur à 4, oui il l'est <b>3</b> ? Ok continue<br>
+		Avance de 100<br>
+		Tourne à droite de 90°<br>
+		Itère, i = i + 1 donc i = <b>3</b> + 1 =&gt; i = <b>4</b><br><br>
+
+		Vérifie si i est inférieur à 4, non! Il est égal à <b>4</b> ? Exit et continue après le bloque<br>
+		Cache la tortue d'algo<br>
+	</div>
+</div>
+
+<a name="étape"></a><h2>étape<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2><p>
+Avec la boucle 'for', il devient possible de compter avec d'autres pas que 1.<br>
+Par exemple, pour compter de 2 en 2.<br>
+Pour faire cela, deux choses sont nécessaires :<br>
+</p><ul>
+	<li>Changer le pas (l'incrément) de l'instruction 'for'</li>
+	<li>Faire très attention à ce que ce saut ne dépasse pas la condition. C'est pour ça qu'on préfère vérifier que le compteur soit &lt; ou &gt; plutôt que == (égale)</li>
+</ul>
+<p></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">de 2 en 2:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// compte de 2 en 2</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">&lt;=</span> <span style="color: #9933cc; font-weight: bold;">8</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">=</span> i <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"De 0 à 8 inclus de 2 en 2 : "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">i</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+La condition i &lt; garantie que si i deviens supérieur à 8 la boucle va tout de même sortir.<br>
+i = i + 2 va incrémenter i par 2 à chaque tour.<br>
+Note que la condition est i &lt;= 8, ce qui inclus 8 : <span class="warning">0, 2, 4, 6, 8</span>
+</p>
+
+<a name="compte_à_rebours"></a><h2>compte à rebours<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2><p>
+Il est également possible d'utiliser l'instruction 'for' pour faire un compte à rebours.<br>
+Pour faire cela, deux choses sont nécessaires :<br>
+</p><ul>
+	<li>Changer le pas (l'incrément) par une valeur négative</li>
+	<li>Inverser le nombre de départ et celui de la condition d'arrivé pour allez du plus grand au plus petit</li>
+</ul>
+<p></p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">compte à rebours:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// compte à rebour</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">8</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">&gt;=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">=</span> i <span style="color: #cc0000;">-</span> <span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">output</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"De 8 à 0 de pas -1 : "</span> <span style="color: #cc0000;">..</span> <span style="color: #333333;">i</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<p>
+Le programme va allez depuis 8 à 0 à rebours
+Il est initialisé avec 8 et la condition vérifie qu'il soit plus grand ou égale à 0
+Execute le en mode pas à pas pour voir ce qu'il ce passe (c'est vrai pour tous les exemples).<br>
+Note : L'itération i = i - 1 peu-t-être écrit i--
+</p>
+
+<a name="à_toi_de_jouer"></a><h2>à toi de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2><h3>Une autre façon d'écrire un pentagone</h3>
+<h3>Crée un pentagone</h3>
+<p>Un pentagone est constitué de 5 lignes</p>
+<a href="./tuto1.6_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex2.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="pentagone_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="pentagone_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// boucle 5 fois</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span><span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> <span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// las rotation totale divisé par le nombre de ligne</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#pentagone_source_code").hide();
+			$("#pentagone_source_copy").hide();
+			$("#pentagone_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#pentagone_source_code").show("blind");
+							$("#pentagone_source_copy").show();
+							$("#pentagone_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Polygone</h3>
+<h3>Crée polygone</h3>
+<p>Un polygone est constitué d'un nombre quelconque de ligne</p>
+<a href="./tuto1.6_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex1.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="polygone_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="polygone_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// boucle x fois</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> nbEdge <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">8</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// utilise une variable</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span>nbEdge<span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// boucle sur le nombre de ligne</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">80</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> nbEdge<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// la rotation complète divisé par le nombre de ligne</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#polygone_source_code").hide();
+			$("#polygone_source_copy").hide();
+			$("#polygone_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#polygone_source_code").show("blind");
+							$("#polygone_source_copy").show();
+							$("#polygone_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Polygone définit par l'utilisateur</h3>
+<p>Dessine un polygone dont le nombre de ligne et la taille sont déterminés par l'utilisateur de ton programme.</p>
+<a href="./tuto1.6_files/ex2(1).png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex2(1).png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="user_polygone_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="user_polygone_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// demande à l'utilisateur</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> nbEdge <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputNumber</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"Combien de ligne(s) ?"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputNumber</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"Quel est la taille des lignes ?"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span>nbEdge<span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// boucle sur le nombre de ligne</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> nbEdge<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// la rotation complète divisé par le nombre de ligne</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#user_polygone_source_code").hide();
+			$("#user_polygone_source_copy").hide();
+			$("#user_polygone_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#user_polygone_source_code").show("blind");
+							$("#user_polygone_source_copy").show();
+							$("#user_polygone_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Boucles imbriquées</h3>
+<p>Dessine la figure suivante</p>
+<a href="./tuto1.6_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex3.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="multi_polygone_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="multi_polygone_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// constantes</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> nbGeom <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> nbEdge <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">20</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #669900; font-style: italic;">// la première boucle de notre géométrie</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> g<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> g<span style="color: #cc0000;">&lt;</span>nbGeom<span style="color: #cc0000;">;</span> g<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// la seconde</span><br>
+&nbsp; <span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span>nbEdge<span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> nbEdge<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+&nbsp; <span style="color: #cc0000;">}</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> nbGeom<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#multi_polygone_source_code").hide();
+			$("#multi_polygone_source_copy").hide();
+			$("#multi_polygone_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#multi_polygone_source_code").show("blind");
+							$("#multi_polygone_source_copy").show();
+							$("#multi_polygone_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><p>Joue avec les paramètres pour obtenir des géométrie amusantes</p>
+
+<h3>Variation sur les étoiles à base de ligne</h3>
+<p>Dessine une étoile à base de ligne en augmentant la taille des lignes</p>
+<a href="./tuto1.6_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex4.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="increment_line_star_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="increment_line_star_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+<li class="even">
+18<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// constantes</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> nbBranche <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">20</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> factor <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span><span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i <span style="color: #cc0000;">&lt;</span> nbBranche<span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// dessine une branche</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>factor <span style="color: #cc0000;">*</span> i<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// utilisation du compteur de tour</span><br>
+&nbsp; <span style="color: #669900; font-style: italic;">// retourne à la position et la rotation initiale</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>factor <span style="color: #cc0000;">*</span> i<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">180</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <br>
+&nbsp; <span style="color: #669900; font-style: italic;">// tourne pour la prochaine branche</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> nbBranche<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#increment_line_star_source_code").hide();
+			$("#increment_line_star_source_copy").hide();
+			$("#increment_line_star_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#increment_line_star_source_code").show("blind");
+							$("#increment_line_star_source_copy").show();
+							$("#increment_line_star_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Labyrinthe</h3>
+<p>Avec le changement de taille des branches de l'étoile, nous avons vu l'importance de la variable de compteur.<br>
+Essaie de dessine la spirale à 4 côtés comme suivant :
+</p>
+<a href="./tuto1.6_files/ex5.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex5.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="maze_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="maze_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// labyrinthe</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> size <span style="color: #cc0000;">=</span> <span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// initialisation de la variable</span><br>
+<span style="color: #669900; font-style: italic;">// boucle de la spirale</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span><span style="color: #9933cc; font-weight: bold;">45</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; size <span style="color: #cc0000;">=</span> size <span style="color: #cc0000;">+</span> <span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>size<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#maze_source_code").hide();
+			$("#maze_source_copy").hide();
+			$("#maze_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#maze_source_code").show("blind");
+							$("#maze_source_copy").show();
+							$("#maze_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Spirale triangulaire</h3>
+<p>Quelles sont les modifications dans le code précédent pour obtenir la figure suivante :</p>
+<a href="./tuto1.6_files/ex7.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex7.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="spiral1_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="spiral1_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// spirale</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span><span style="color: #9933cc; font-weight: bold;">450</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">=</span>i<span style="color: #cc0000;">+</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>i<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">121</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#spiral1_source_code").hide();
+			$("#spiral1_source_copy").hide();
+			$("#spiral1_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#spiral1_source_code").show("blind");
+							$("#spiral1_source_copy").show();
+							$("#spiral1_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Spirale</h3>
+<p>Joue avec les valeurs pour obtenir la figure suivante :</p>
+<a href="./tuto1.6_files/ex8.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex8.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="spiral2_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="spiral2_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// spirale</span><br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span><span style="color: #9933cc; font-weight: bold;">45</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">=</span>i<span style="color: #cc0000;">+</span><span style="color: #9933cc; font-weight: bold;">0.1</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span>i<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">10</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #cc0000;">}</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#spiral2_source_code").hide();
+			$("#spiral2_source_copy").hide();
+			$("#spiral2_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#spiral2_source_code").show("blind");
+							$("#spiral2_source_copy").show();
+							$("#spiral2_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+<h3>Etoile</h3>
+<p>Dessine une étoile dont le nombre de branche est choisi par l'utilisateur</p>
+<a href="./tuto1.6_files/ex4(1).png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.6_files/ex4(1).png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution&nbsp;:&nbsp;</div>
+<div class="synhi-copy"><a id="star_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="star_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// demande à l'utilisateur</span><br>
+<span style="color: #0099cc; font-weight: bold;">set</span> nbBranche <span style="color: #cc0000;">=</span> <span style="color: #000000;">text</span><span style="color: #cc0000;">.</span><span style="color: #333333;">inputNumber</span><span style="color: #cc0000;">(</span><span style="color: #9933cc;">"Combien de branches ?"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+<span style="color: #0099cc; font-weight: bold;">for</span> <span style="color: #cc0000;">(</span><span style="color: #0099cc; font-weight: bold;">set</span> i<span style="color: #cc0000;">=</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">&lt;</span>nbBranche<span style="color: #cc0000;">;</span> i<span style="color: #cc0000;">++</span><span style="color: #cc0000;">)</span> <span style="color: #cc0000;">{</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">60</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">60</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<br>
+&nbsp; <span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">360</span> <span style="color: #cc0000;">/</span> nbBranche<span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <br>
+<span style="color: #cc0000;">}</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#star_source_code").hide();
+			$("#star_source_copy").hide();
+			$("#star_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#star_source_code").show("blind");
+							$("#star_source_copy").show();
+							$("#star_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.6_for_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>qu'est ce que la boucle for ?</li><li>comment l'utiliser ?</li><li>comment l'utiliser pour faire un compte à rebour ?</li><li>what are the loop instructions and structure ?</li><li>comment l'utiliser pour faire des dessins encore plus beau ?</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0078)http://www.algoid.net/help.php?name=tutorials&url=tuto_1.2_art_FR&mobile=false -->
+<html lang="en" style="background-color:transparent;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<meta name="Author" content="Yann Caron, CyaNn, Orange Head">
+	<meta name="Category" content="Programming, Language, Kids, Beginner, Learning, Teaching">
+	<meta name="Copyright" content="Yann Caron 2012">
+	<meta name="Language" content="en">
+	<meta name="Description" content="Educational programming language for kids and beginners. Learn how to program. How to program games. Langage de programmation �ducatif pour enfants et d�butants. Apprendre comment programmer. Comment programmer un jeu video.">
+	<meta name="Keywords" content="educational, programming, language, kid, beginner, turtle, android, app, linux, mac, windows, raspberry, PI, child, children, logo, teenager, teenagers, language, learn, learning, teach, teaching, forum, basic, device, mobil, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk, programmation, langage, enfant, d�butant, android, app, linux, mac, windowns, raspberry, PI, logo, adolescent, ado, apprendre, se former, auto-didacte, enseigner, forum, basic, smartphone, phone, tablette, mobile, google, play, algorithm, python, sl4a, javascript, java, script, smalltalk">
+
+    <title>Algoid - tutorials - programming language for kids and beginners !</title>
+	
+	<!-- fav icon -->
+	<link rel="icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.algoid.net/img/logo.ico">
+	
+    <link rel="stylesheet" href="./tuto1.2_files/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.2_files/page-style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.2_files/page-layout.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./tuto1.2_files/content.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.2_files/synhi.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.2_files/jquery-ui-1.9.2.custom.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="./tuto1.2_files/prettyPhoto.css" type="text/css" media="screen" charset="utf-8">
+   	<style type="text/css">
+		div.menu div.tab-tutorials div.menu-content {
+			background-image: url('img/tab-selected.gif');
+		}
+	</style>
+	<!-- JQuery, Analytics and prettyPhoto -->
+	<script src="./tuto1.2_files/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.2_files/jquery-ui-1.9.2.custom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./tuto1.2_files/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./tuto1.2_files/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'facebook',slideshow:5000, autoplay_slideshow:true});
+	  });
+	</script>
+</head>
+<body class="help">
+	<div class="main">
+		<div class="scroll">
+			<div class="content">
+				<!-- before content -->
+
+﻿﻿
+<div id="dialog-confirm" title="show code solution" style="display:none">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>Es-tu sûre de vouloir voir ce code source ?<br>As-tu essayer de réfléchir avec ce que nous venons de voir ?</div>
+
+
+	
+		<a name="top"></a>
+		<h1>1.2 - Fonctionnalités graphiques</h1>
+		<p>Ce tutoriel va illustrer les capacités artistiques d'Algoid.<br>
+	Tu vas être capable de dessiner des oeuvres avec des couleurs, des tailles de traits, des formes et des textes.<br>
+	Amuse-toi bien !</p>
+		<a name="synopsis"></a><h2>synopsis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2>		<ol class="synopsis">
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#prérequis">prérequis</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#notions_de_base">notions de base</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#montrer_/_cacher">montrer / cacher</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#couleurs">couleurs</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#visibilité_de_la_tortue">visibilité de la tortue</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#taille_du_trait">taille du trait</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#plus_de_formes">plus de formes</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#à_toi_de_jouer">à toi de jouer</a></li><li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#sommaire">sommaire</a></li>			<br>
+			<li><a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tutorials_FR&amp;mobile=false">&lt;&lt;&nbsp;retour aux tu(r)toriaux</a></li>
+		</ol>
+		<a name="prérequis"></a><h2>prérequis<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2>		<p>Avant de lire ce tutoriel, il est important d'avoir lu  :&nbsp;<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.1_intro_FR">1.1 - Qu'est ce qu'un programme ?</a></p>		<a name="notions_de_base"></a><h2>notions de base<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><p>
+Qu'est-ce qu'une bibliothèque ?<br>
+Tous les langages de programmation sont divisés en deux parties principales :</p>
+<ul>
+	<li>les primitives, qui seront expliquées dans les prochains tutoriels ;</li>
+	<li>les bibliothèques.</li>
+</ul>
+<p>
+Les bibliothèques (ou API) sont un ensemble d'outils utilisés pour exécuter des travaux plus complexes.<br>
+Dans le cas d'AL, tous ces outils sont contenus dans des fonctions qui sont elles-mêmes contenues dans des objets.<br>
+AL possède plusieurs objets comme Math (pour exécuter des calculs arithmétiques), Util, UI… et Algo.<br>
+L'objet Algo contient tout ce dont nous avons besoin pour dessiner avec la tortue et bien plus encore.<br>
+</p>
+<a name="montrer_/_cacher"></a><h2>montrer / cacher<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><p>
+Dans le tutoriel 1.1, nous avons vu ensemble comment avancer en dessinant une ligne avec l'instruction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.go">algo.go</a>.<br>
+Il est possible d'aller dans la même direction sans dessiner quoi que ce soit avec l'instruction <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.jump">algo.jump</a>.<br>
+Observons ce que le code suivant fait :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Algo jump:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">70</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/jump.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/jump.png"></a><a name="couleurs"></a><h2>couleurs<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><p>
+L'objet Algo fournit deux propriétés pour changer la couleur.<br>
+La couleur du prochain trait avec <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.setColor">algo.setColor</a>.<br>
+La couleur du fond avec la propriété <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.setBgColor">algo.setBgColor</a>.<br>
+Les propriétés de couleur utilisent toutes deux la même table de nombres dont chaque nombre correspond à une couleur:<br>
+</p>
+<table class="standard">
+	<tbody><tr>
+		<th>couleur</th>
+		<th>valeur</th>
+		<th>couleur</th>
+		<th>valeur</th>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#000000;">transp.</span></td><td>-1</td>
+		<td class="color"><span>&nbsp;</span></td><td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#000000;">noir</span></td><td>0</td>
+		<td class="color"><span style="color:#555555;">gris sombre</span></td><td>8</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#0000cc;">bleue sombre</span></td><td>1</td>
+		<td class="color"><span style="color:#4444ff;">bleue</span></td><td>9</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#669900;">vert sombre</span></td><td>2</td>
+		<td class="color"><span style="color:#99cc00;">vert</span></td><td>10</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#0099cc;">cyan sombre</span></td><td>3</td>
+		<td class="color"><span style="color:#33b5e5;">cyan</span></td><td>11</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#cc0000;">rouge sombre</span></td><td>4</td>
+		<td class="color"><span style="color:#ff4444;">rouge</span></td><td>12</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#9933cc;">violet sombre</span></td><td>5</td>
+		<td class="color"><span style="color:#aa66cc;">violet</span></td><td>13</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#805500;">marron</span></td><td>6</td>
+		<td class="color"><span style="color:#fff444;">jaune</span></td><td>14</td>
+	</tr>
+	<tr>
+		<td class="color"><span style="color:#AAAAAA;">gris clair</span></td><td>7</td>
+		<td class="color"><span style="color:#000000;">blanc</span></td><td>15</td>
+	</tr>
+</tbody></table><p>
+<br>Un exemple de manipulation de couleurs :
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Algo colors:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setBgColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">11</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cyan foncé</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span><span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// cyan</span><br>
+<span style="color: #669900; font-style: italic;">// our square</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/colors.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/colors.png"></a>
+<a name="visibilité_de_la_tortue"></a><h2>visibilité de la tortue<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><p>Il est possible de cacher et de montrer la tortue en utilisant : <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.hide">algo.hide</a> et <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.show">algo.show</a>.
+</p>
+<a name="taille_du_trait"></a><h2>taille du trait<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><p>
+Pour changer la taille du futur trait à dessiner, utilisons la propriété <a href="http://www.algoid.net/help.php?name=reference&amp;url=reference_FR#algo.setStroke">algo.setStroke</a>.<br>
+Les nombres supérieurs à 1 seront plus épais que la taille par défaut.<br>
+Les nombres inférieurs à 1 (par exemple 0.2, 0.5) seront plus fins.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Taille des traits Algo :&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setStroke</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">0.2</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// fin</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setStroke</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">1</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// épais</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setStroke</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">2</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// plus épais</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setStroke</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">3</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// ....</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setStroke</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">4</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// ....</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setStroke</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">5</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// ....</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">25</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/stroke.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/stroke.png"></a><a name="plus_de_formes"></a><h2>plus de formes<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><h3>cercle</h3>
+<p>Dessinons un cercle avec un diamètre particulier.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape1.png"></a><h3>disc</h3>
+<p>Le même cercle, mais plein, cette fois-ci.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape2.png"></a><h3>ovale</h3>
+<p>Dessinons un ovale avec les diamètres x et y particuliers.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">oval</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape3.png"></a><h3>platter</h3>
+<p>Le même ovale, mais plein, cette fois-ci.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">platter</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape4.png"></a><h3>rectangle</h3>
+<p>Dessinons un rectangle avec les dimensions hauteur et largeur.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">rect</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape5.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape5.png"></a><h3>surface plane</h3>
+<p>Le même que rectangle, mais plein.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">plane</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape7.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape7.png"></a><h3>text</h3>
+<p>Dessinons une ligne de texte.</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">forme:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #000000;">text</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc;">"hello algoid !"</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">-</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<a href="./tuto1.2_files/shape8.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/shape8.png"></a>		
+
+<a name="à_toi_de_jouer"></a><h2>à toi de jouer<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2><h3>ex1: modifie notre carré</h3>
+<p>En modifiant le code source suivant (notre carré), essayons d'obtenir le dessin suivant :</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Ex1:&nbsp;</div>
+</div>
+<div id="none_code">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// left</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// top</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// right</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// bottom</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+		
+<a href="./tuto1.2_files/ex1.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/ex1.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="ex1_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="ex1_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// left</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// top</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// modify here</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// right</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// bottom</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// and here and thats all</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#ex1_source_code").hide();
+			$("#ex1_source_copy").hide();
+			$("#ex1_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#ex1_source_code").show("blind");
+							$("#ex1_source_copy").show();
+							$("#ex1_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>	
+<h3>ex2: cible</h3>
+<p>Essayons de dessiner la figure suivante :/p&gt;
+<a href="./tuto1.2_files/ex2.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/ex2.png"></a></p><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="ex2_1_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="ex2_1_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// dark</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">300</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// light</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// dark</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">disc</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#ex2_1_source_code").hide();
+			$("#ex2_1_source_copy").hide();
+			$("#ex2_1_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#ex2_1_source_code").show("blind");
+							$("#ex2_1_source_copy").show();
+							$("#ex2_1_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><br>
+<p>Essayons avec l'ovale :</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="ex2_2_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="ex2_2_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">platter</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">300</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// dark</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">platter</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">300</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// light</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">platter</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#ex2_2_source_code").hide();
+			$("#ex2_2_source_copy").hide();
+			$("#ex2_2_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#ex2_2_source_code").show("blind");
+							$("#ex2_2_source_copy").show();
+							$("#ex2_2_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><br>
+<p>Et le rectangle :</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="ex2_3_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="ex2_3_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">plane</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">300</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">0</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// dark</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">plane</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">300</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">setColor</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">7</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// light</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">plane</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">,</span> <span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#ex2_3_source_code").hide();
+			$("#ex2_3_source_copy").hide();
+			$("#ex2_3_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#ex2_3_source_code").show("blind");
+							$("#ex2_3_source_copy").show();
+							$("#ex2_3_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex3: cercles</h3>
+<p>Essayons de dessiner la figure suivante :</p>
+<a href="./tuto1.2_files/ex3.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/ex3.png"></a><div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="ex3_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="ex3_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">800</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">jump</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">400</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">1600</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+&nbsp;</div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#ex3_source_code").hide();
+			$("#ex3_source_copy").hide();
+			$("#ex3_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#ex3_source_code").show("blind");
+							$("#ex3_source_copy").show();
+							$("#ex3_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script><h3>ex4: définition d'un triangle</h3>
+<p>
+Avec un script, dessinons la figure suivante :<br>
+<a href="./tuto1.2_files/ex4.png" rel="prettyPhoto[g1]"><img class="help" src="./tuto1.2_files/ex4.png"></a>Indice : Pour faire un tour complet, la tortue doit tourner de 360°. Il faut donc tourner de 360 / 3 = 120° pour chaque segment de droite.<br>
+</p>
+<div class="synhi-block">
+<div class="synhi-block-title">&nbsp;
+<div class="synhi-comment">Solution:&nbsp;</div>
+<div class="synhi-copy"><a id="pyramid2_source_button" class="synhi-title">voir la solution</a></div>
+</div>
+<div id="pyramid2_source_code" style="display: none;">
+<table class="synhi-code">
+<tbody><tr><th><ul class="code">
+<li class="odd">
+1<br>	
+</li>
+<li class="even">
+2<br>	
+</li>
+<li class="odd">
+3<br>	
+</li>
+<li class="even">
+4<br>	
+</li>
+<li class="odd">
+5<br>	
+</li>
+<li class="even">
+6<br>	
+</li>
+<li class="odd">
+7<br>	
+</li>
+<li class="even">
+8<br>	
+</li>
+<li class="odd">
+9<br>	
+</li>
+<li class="even">
+10<br>	
+</li>
+<li class="odd">
+11<br>	
+</li>
+<li class="even">
+12<br>	
+</li>
+<li class="odd">
+13<br>	
+</li>
+<li class="even">
+14<br>	
+</li>
+<li class="odd">
+15<br>	
+</li>
+<li class="even">
+16<br>	
+</li>
+<li class="odd">
+17<br>	
+</li>
+</ul></th>
+<td>
+<div class="al" style="font-family:monospace;"><span style="color: #669900; font-style: italic;">// initialize turtle s position</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnLeft</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">90</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// the begin of the bottom side</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span> <span style="color: #669900; font-style: italic;">// 360 / 3</span><br>
+<span style="color: #669900; font-style: italic;">// side 2</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// side 3</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">100</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">circle</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">200</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">turnRight</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">120</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #669900; font-style: italic;">// finnish the bottom side</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">go</span> <span style="color: #cc0000;">(</span><span style="color: #9933cc; font-weight: bold;">50</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span><br>
+<span style="color: #000000;">algo</span><span style="color: #cc0000;">.</span><span style="color: #333333;">hide</span> <span style="color: #cc0000;">(</span><span style="color: #cc0000;">)</span><span style="color: #cc0000;">;</span></div></td></tr>
+</tbody></table>
+</div>
+</div>
+<script>
+			$("#pyramid2_source_code").hide();
+			$("#pyramid2_source_copy").hide();
+			$("#pyramid2_source_button").click(function (event) {
+				event.preventDefault();
+			    $("#dialog-confirm").dialog({
+			        resizable: false,
+			        modal: true,
+			        buttons: {
+			            "sure": function() {
+			                $(this).dialog( "close" );
+							$("#pyramid2_source_code").show("blind");
+							$("#pyramid2_source_copy").show();
+							$("#pyramid2_source_button").hide();
+			            },
+			            Cancel: function() {
+			                $( this ).dialog( "close" );
+			            }
+			        }
+			    });
+			});
+	  		</script>	
+﻿		<a name="sommaire"></a><h2>sommaire<a href="http://www.algoid.net/help.php?name=tutorials&amp;url=tuto_1.2_art_FR&amp;mobile=false#top"></a></h2>		<h3>connaissances</h3>
+		<p>Dans ce tutoriel, vous avez appris :</p>
+		<ul class="enum">
+		<li>Qu'est-ce qu'une bibliothèque (une API) ?</li><li>Les fonctions principales d'Algoid ;</li><li>Comment faire quelques dessins amusants.</li>		</ul>
+		<h3>fonctions utilisées :</h3>
+		<p>
+		</p><div style="overflow:auto;"><table class="standard"><tbody><tr><th>Fonction</th><th>Déscription</th></tr></tbody></table></div></div></div></div></body></html>
