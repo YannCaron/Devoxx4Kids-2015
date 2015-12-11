@@ -1,12 +1,5 @@
-set draw = function (x, y) {
-	algo.goTo (x, y);
-	algo.disc (25);
-}
-
-set changeColor = function () {
-	algo.setColor (math.random(16));
-}
-
+set stamp = algo.stamp.load("PlanetCute/Character Princess Girl");
+algo.rotateTo(45)
+algo.goTo(50, 150);
 algo.hide();
-algo.onTouch(draw);
-util.pulse(changeColor, 1500); // pour les plus avancés
+stamp.draw();
