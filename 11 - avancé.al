@@ -1,4 +1,4 @@
-set stamp = algo.stamp.load("PlanetCute/Character Princess Girl");
+﻿set stamp = algo.stamp.load("PlanetCute/Character Princess Girl");
 
 algo.onTouch((x, y) {
 	algo.autoClear();

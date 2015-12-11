@@ -1,4 +1,4 @@
-set carre = function (x, y) {
+﻿set carre = function (x, y) {
 algo.clear ();
 algo.goTo (x, y);
 loop (4) {

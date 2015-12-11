@@ -1,4 +1,4 @@
-set carre = function () {
+﻿set carre = function () {
   loop (4) {
     algo.go (100)
     algo.turnRight (90)

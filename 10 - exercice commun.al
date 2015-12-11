@@ -1,4 +1,4 @@
-set draw = function (x, y) {
+﻿set draw = function (x, y) {
 	algo.goTo (x, y);
 	algo.disc (25);
 }

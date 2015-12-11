@@ -1,4 +1,4 @@
-set nbCote = 4
+﻿set nbCote = 4
 set angle = 360 / nbCote // 90°
 
 loop (nbCote) {
