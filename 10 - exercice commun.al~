@@ -1,6 +1,0 @@
-set draw = function (x, y) {
-	algo.goTo (x, y);
-	algo.disc (10);
-}
-
-algo.onTouch(draw);
