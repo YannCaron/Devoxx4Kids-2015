@@ -1,4 +1,4 @@
-set nbCote = math.random(10)
+set nbCote = 3 + math.random(14)
 set angle = 360 / nbCote // ??°
 
 loop (nbCote) {
